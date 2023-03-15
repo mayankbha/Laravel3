@@ -1,0 +1,106 @@
+		.video_popup{
+			position: absolute;
+			margin: 0;
+			max-height: 600px;
+			max-height: 1000px;
+			align-self: center;
+			left: 0;
+		}
+		.download{
+			color: orange;
+			position: absolute;
+			top: 10;
+			right: 10;
+			font-size: 15px;
+			font-weight: bold;	
+		}
+				/* The Modal (background) */
+		.modal {
+			padding: 5%;
+		    display: block; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: #171719; /* Fallback color */
+		    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+		    transition: opacity .8s cubic-bezier(0.46, 0.03, 0.52, 0.96), z-index 0s .8s;
+		}
+
+		/* Modal Content/Box */
+		.modal-content {
+
+		    background-color: #000;
+		    width: 70%; /* Could be more or less, depending on screen size */
+		    height: auto;
+		    position: relative;
+		    margin: auto;
+		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		    -webkit-animation-name: animatetop;
+		    -webkit-animation-duration: 0.4s;
+		    animation-name: animatetop;
+		    animation-duration: 0.4s
+		   
+		}
+
+		/* The Close Button */
+		.close {
+		    color: #FFF;
+		    float: right;
+		    font-size: 28px;
+		    font-weight: bold;
+		    padding-right: 10px;
+		}
+
+		.close:hover,
+		.close:focus {
+		    color: orange;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+		/* Modal Header */
+		.modal-header {
+		    padding: 2px 16px;
+		    background-color: #5cb85c;
+		    color: white;
+		}
+
+		/* Modal Body */
+		.modal-body {padding: 2px 16px;}
+
+		/* Modal Footer */
+		.modal-footer {
+		    padding: 2px 16px;
+		    background-color: #5cb85c;
+		    color: white;
+		}
+
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+		    from {top:0; opacity: 0} 
+		    to {top: 0; opacity: 1}
+		}
+
+		@keyframes animatetop {
+		    from {top:0; opacity: 0}
+		    to {top: 0; opacity: 1}
+		}
+@media all and (max-width: 1300px) {
+   		
+   		.modal {
+			padding: 10% 5%;
+		}
+		
+		.modal-content {
+
+		    
+		    width: 90%; 
+		    height: auto;
+		   
+		   
+		}
+
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Send mail monment montage</title>
+
+<style type="text/css">
+	body {
+		background-color: #EEEEEE;
+	}
+	.main {
+		max-width: 500px; margin: 0 auto;
+		background-color: #F1F1F1;
+		text-align: center;
+		font-family: Arial;
+		padding-bottom: 30px;
+	}
+	.header {
+		height: 80px;
+		background-color: #0E1E37;
+		text-align: center;
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+	.logo {
+		width: 260px;
+		height: 30px;
+		margin-top: 20px;
+	}
+	.avatar {
+		margin-top: 15px;
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+	}
+	.username {
+		margin: 15px auto;
+		color: #0E1E37;
+	}
+	.info {
+		margin: 30px auto;
+	}
+	.thumnail {
+		width: 320px;
+		height: 180px;
+		margin: 15px auto;
+	}
+
+	.social .center_span
+	{
+		padding-right: 35px;
+		padding-left: 35px;
+	}
+	.boom_mt {
+		width: 55px;
+		height: 48px;
+		vertical-align:middle;
+	}
+	.number {
+		font-size: 40px;
+		font-weight: 300;
+		vertical-align:middle;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	.footer {
+		height: 50px;
+	}
+	.percent {
+		font-size: 35px;
+		color: #417505;
+		vertical-align:text-bottom;
+	}
+	.percent_numb {
+		font-size: 14px;
+		display: block;
+		padding-left: 207px;
+		position: relative;
+		margin-top: -20px;
+	}
+	.green_button {
+		display: inline-block;
+		border-radius: 4px;
+		background-color: #4caf50;
+		border: none;
+		color: #FFFFFF;
+		text-align: center;
+		width: 250px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px;
+	}
+
+	.green_button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+	<div align="center" class="img-container center fullwidth" style="padding-right: 0px;  padding-left: 0px;">
+	  <img class="center fullwidth" align="center" border="0" src="{{config('content.cloudfront').'/assets/email' . '/Header.png'}}" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 500px" width="500">
+	</div>
+	<div class="content">
+		<div align="center" class="img-container center" style="padding-right: 0px;  padding-left: 0px;">
+		<div style="line-height:10px;font-size:1px">&nbsp;</div>  <img class="center" align="center" border="0" src="{{$user->avatar}}" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 105px" width="105">
+		<div style="line-height:15px;font-size:1px">&nbsp;</div>
+		</div>
+		<div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+			<div style="font-size:12px;line-height:14px;color:#0E1E37;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;">
+                <p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 18px; line-height: 21px;">{{$user->displayname}}</span></p>
+                <p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px; color: rgb(219, 105, 54);">Date: {{$date}}</span></p>
+            </div>
+		</div>
+		<div style="padding-right: 10px; padding-left: 10px;padding-bottom: 10px;">
+			<div style="font-size:12px;line-height:14px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 18px; line-height: 21px; color: rgb(14, 30, 55);">Total Boom Requests {{$number_boom}}</span></p>
+			</div>
+		</div>
+		<div style="padding-right: 10px; padding-left: 10px;padding-bottom: 10px;">
+			<div style="font-size:12px;line-height:24px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 28px;text-align: center"><span style="font-size: 14px; line-height: 28px; color: rgb(14, 30, 55);">We created montage from all the top replays of the day.. take a look. If you like it, dont forget to share it with all your followers who couldnt watch you today!</span></p></div>
+		</div>
+		<div href="{{$link}}" style="width:320px;height:180px;margin:0 auto;background-image: url('{{$thumbnail}}');background-size: 100% 100%;">
+            <div style="max-height:0;max-width:0;overflow: visible;">
+                <div style="width:50px;height:50px;margin-top:60px;margin-left:135px;display:inline-block;text-align:center;line-height:100px;font-size:50px;">
+                    <a href="{{$link}}"><img src="{{config('content.cloudfront').'/assets/v1' . '/orange-play-th.png'}}" alt="Watch your montage" title="Watch your montage" width="50"></a>
+                </div>
+            </div>
+	    </div>
+		<div style="padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 10px;">
+			<div style="font-size:12px;line-height:24px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;">
+				<p style="margin: 0;font-size: 12px;line-height: 24px;text-align: center">
+					<a href="https://twitter.com/intent/tweet?original_referer={{$link}}&ref_src=twsrc%5Etfw&amp;text=Watch%20the%20montage&tw_p=tweetbutton&amp;url={{$link}}" class="green_button">
+						<span style="font-size: 18px; line-height: 36px; color: #55ACEE">Share with your followers</span>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;margin: 0 auto">
+			<div style="font-size:12px;line-height:24px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;">
+				<p style="margin: 0;font-size: 12px;line-height: 24px;text-align: center">
+					<!-- <a style="" href='https://twitter.com/intent/tweet?original_referer={{$link}}&ref_src=twsrc%5Etfw&amp;text=Watch%20the%20montage&tw_p=tweetbutton&amp;url={{$link}}'>
+						<img src="{{config('content.cloudfront').'/assets/email' . '/twitter@2x.png'}}" alt="Twitter" title="Twitter" width="32" />
+					</a> -->
+					{{--<span  class="center_span">&nbsp;</span>--}}
+					<a style="margin-left: 30px" href='https://www.facebook.com/sharer/sharer.php?u={{$link}}&src=sdkpreparse&title=Watch%20the%20montage&sumary=Watch%20the%20montage&quote=Watch%20the%20montage%20{{$link}}'>
+						<img src="{{config('content.cloudfront').'/assets/email' . '/facebook@2x.png'}}" alt="Facebook" title="Facebook" width="32" />
+					</a>
+				</p>
+			</div>
+
+		</div>
+		<div style="padding-right: 10px; padding-left: 10px; padding-top: 10px;margin: 0 auto">
+			<div style="font-size:12px;line-height:24px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;">
+				<p>If you don't want to receive this email anymore, please click <a href="{{$unsubscribe}}">here</a>.</p>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

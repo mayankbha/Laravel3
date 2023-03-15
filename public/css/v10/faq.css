@@ -1,0 +1,30 @@
+.faq  {
+		color: white;
+	}
+.faq .title {
+	font-size: 3rem;
+	color: #FF702A;
+}
+.faq .update {
+	font-style: italic;
+}
+.faq .question {
+	font-weight: bold;
+	margin: 20px 10px;
+}
+.faq .float-center {
+	text-align: center;
+}
+.faq .answer {
+	font-size: 15px;
+	font-weight: 500;
+	margin-left: 30px;
+	color: #a9aab2;
+}
+.faq .note {
+	margin: 20px 10px;
+	color: red;
+}
+.faq a {
+	color: #4683E8;
+}

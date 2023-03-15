@@ -1,0 +1,25 @@
+{
+  "name": "zarlach/laravel-twitch-api",
+  "description": "Laravel Twitch RESTful API",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Petter Kraabøl",
+      "email": "petter.zarlach@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Zarlach\\TwitchApi\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.9",
+    "guzzlehttp/guzzle": "~6.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "5.*",
+    "laravel/laravel": "5.*"
+  }
+}

@@ -1,0 +1,402 @@
+/*sign in*/
+.sign_in.nav_link {
+    display: flex;
+}
+.list-video {
+    margin: 0 auto;
+}
+.video-detail {
+    opacity: 1;
+}
+.video-detail .card_image {
+    height: 60%;
+}
+.video-detail .card_play
+{
+    display: none;
+}
+body {
+font-family: 'Open Sans', sans-serif;
+}
+
+.carousel_title {
+	font-family: 'Open Sans', sans-serif;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+   .variable-width-big .slick-next, .variable-width-big .slick-prev {
+        top: 28%;
+    }
+    .variable-width .slick-next, .variable-width .slick-prev {
+        top: 6%;
+    }
+    .video-detail .card_image {
+        height: 30%;
+    }
+    .list-video .variable-width .slick-list .slick-track .card {
+        width: 320px;
+        max-width: 320px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  
+    .video-detail .card_image {
+        height: 40%;
+    }
+    .list-video .variable-width .slick-list .slick-track .card {
+        width: 243px;
+        max-width: 243px;
+    }
+}
+/* iPhone 6 in portrait & landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+{ 
+    .list-video .variable-width .slick-list .slick-track .card {
+        width: 372px;
+        max-width: 372px;
+    } 
+    .variable-width .slick-next, .variable-width .slick-prev {
+        top: 10%;
+    }
+}
+/* iPhone 6 plus in portrait & landscape */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { 
+ .list-video .variable-width .slick-list .slick-track .card {
+        width: 410px;
+        max-width: 410px;
+    } 
+  .variable-width .slick-next, .variable-width .slick-prev {
+        top: 10%;
+    }
+}
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    .list-video {
+        width: 1069px;
+    }
+    .video-detail .card_image {
+        height: 64%;
+    }
+    .list-video .slick-prev:before {
+        margin-left: -16px;
+    }
+    .list-video .slick-next:before {
+        margin-right: -16px;
+    }
+}
+/*MAC*/
+@media screen and (max-width : 1441px) and (min-width : 1280px){
+    .video-detail .card_image {
+        height: 64%;
+    }
+}
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  .list-video {
+        width: 1051px;
+    }
+    .video-detail .card_image {
+        height: 53%;
+    }
+    .list-video .slick-prev:before {
+        margin-left: -16px;
+    }
+    .list-video .slick-next:before {
+        margin-right: -16px;
+    }
+}
+/* For iphone: */
+@media screen and (max-width : 320px){
+    .video-detail .card_image {
+        height: 30%;
+    }
+}
+
+
+.relative_pos{
+    position : relative;
+}
+
+.absolute_pos{
+    position: absolute;
+}
+
+.top0px{
+    top : 0px;
+}
+
+.left190px{
+    left: 190px;
+}
+
+.x_hide{
+    display: none;
+}
+
+.x_show{
+    display: block;
+}
+
+.card_stats_new {
+    padding: 0 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222431;
+}
+
+.card_likes_new {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #fffeff;
+    font-family: "Avant Garde I T Cby B T";
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card_likes_new img {
+    border-radius: 4px;
+    border: 2px solid rgba(72, 75, 90, 0.5);
+    background-color: rgba(34, 36, 49, 0.5);
+    padding: 8px 6.5px;
+    width: 27px;
+    height: 27px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.card_views_new {
+    display: flex;
+    align-items: center;
+    margin-left: 33px;
+    color: #fffeff;
+    font-family: "Avant Garde I T Cby B T";
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card_views_new img {
+    width: 12px;
+    margin-right: 10px;
+}
+
+.game_accounts_input{
+    width: 110px;
+    height:18px;
+    display: none;
+}
+
+.game_accounts_input input{
+    background: #1d1f2c;
+    border: #222431;
+    color: #868898;
+    width: 110px;
+}
+
+.user_context_save {
+    width: 80px;
+    height: 34px;
+    align-items: center;
+    padding: 0 8px;
+    border: 2px solid #2a2c3b;
+    background-color: rgba(255, 99, 21, 0);
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    font-weight: 400;
+    display: none;
+}
+.user_context_save img {
+    display: flex;
+    align-items: center;
+    width: 16px;
+    margin-right: 10px;
+}
+
+.user_context_about_input {
+    color: #868898;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    display: none;
+}
+
+.user_context_about_input textarea{
+    width: 44em;
+    display: inline;
+    height: auto;
+    background: #1d1f2c;
+    border: #222431;
+    color: #868898;
+}
+.user_context_about{
+    width: 44em;
+    word-wrap: break-word;
+}
+
+.user_context_social_input{
+    margin-right: 5px;
+    display: none;
+}
+.user_context_social_input input{
+    width : 110px;
+    background: #1d1f2c;
+    border: #222431;
+    color: #868898;
+}
+
+.user_context_social_input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #868898;
+    opacity: 0.5;
+}
+.user_context_social_input input::-moz-placeholder { /* Firefox 19+ */
+    color: #868898;
+    opacity: 0.5;
+}
+.user_context_social_input input:-ms-input-placeholder { /* IE 10+ */
+    color: #868898;
+    opacity: 0.5;
+}
+.user_context_social_input input::-moz-placeholder { /* Firefox 18- */
+    color: #868898;
+    opacity: 0.5;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#alert_fail {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 15px;
+    font-size: 17px;
+    height: 50px;
+}
+
+#alert_fail.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+.claim_user {
+    right: 0px;
+    color: #DD9237;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
+.variable-width-big .slick-next , .variable-width-big .slick-prev{
+    background: none;
+}
+
+.variable-width-big .slick-prev:before,.variable-width-big .slick-next:before {
+    content: '';
+    height: 27px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.variable-width-big .slick-slide {
+    opacity: 0.15;
+}
+.variable-width-big .slick-current {
+    opacity: 1;
+
+}
+.variable-width-big .slick-slide .card_properties{
+    border-bottom: 8px solid #868898;
+    padding: 10px 20px 2px 20px;
+}
+.variable-width-big .slick-current .card_properties{
+    border-bottom: 8px solid #222431;
+    padding: 10px 20px 2px 20px;
+}
+
+.profile_user_info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.card_social img{
+    width: initial;
+    height: 16px;
+}
+
+.carousel_title {
+    padding: 0 0px;
+    max-width: 100%;
+}

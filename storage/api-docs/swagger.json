@@ -1,0 +1,984 @@
+{
+    "swagger": "2.0",
+    "paths": {
+        "/api/uploadvideo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload video",
+                "description": "Return status. If success, return status = 0 and link. If fail, return status <> 0 and error",
+                "operationId": "postUploadVideo",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload video",
+                        "required": false,
+                        "type": "file"
+                    },
+                    {
+                        "name": "title",
+                        "in": "body",
+                        "description": "upload video",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "game",
+                        "in": "body",
+                        "description": "game name",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "in": "body",
+                        "description": "type game",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "datetime",
+                        "in": "body",
+                        "description": "datetime record",
+                        "required": false,
+                        "type": "datetime"
+                    },
+                    {
+                        "name": "views",
+                        "in": "body",
+                        "description": "views number of replay",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "likes",
+                        "in": "body",
+                        "description": "likes number of replay",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadlog": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload log",
+                "description": "Return status. If success, return status = 0 and message. If fail, return status <> 0 and message",
+                "operationId": "uploadLog",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    },
+                    {
+                        "name": "description",
+                        "in": "body",
+                        "description": "description string",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token user",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadfile": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload file",
+                "description": "Return status. If success, return status = 0 and link. If fail, return status <> 0 and error",
+                "operationId": "postUploadFile",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/followings": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get list of who the user is following",
+                "description": "Return status. If success, return status = 0 and channels list. If fail, return status <> 0 and error",
+                "operationId": "followings",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/getLoginInfo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get login info to chat room",
+                "description": "Return status. If success, return status = 0 and access_token and nick name. If fail, return status <> 0 and error",
+                "operationId": "getLoginInfo",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "formData",
+                        "description": "version",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/client_version": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get client version",
+                "description": "Return status = 0 if current version and link;status = 1 if not found client file",
+                "operationId": "getClientVersion",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadClient": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload client",
+                "description": "Return status. If success, return status = 0 and message. If fail, return status <> 0 and message",
+                "operationId": "postUploadClient",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadClient2": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload client",
+                "description": "Return status. If success, return status = 0 and message. If fail, return status <> 0 and message",
+                "operationId": "postUploadClient",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/updateVideoViewAndLike": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Update video view num and like num",
+                "description": "Return status. If success, return status = 0. If fail, return status <> 0 and error",
+                "operationId": "updateVideoViewAndLike",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "body",
+                        "description": "video code on boom",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "view",
+                        "in": "body",
+                        "description": "new number of view",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "like",
+                        "in": "body",
+                        "description": "new number of like",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/addBotLog": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get login info to chat room",
+                "description": "Return status. If success, return status = 0. If fail, return status <> 0 and error",
+                "operationId": "addBotLog",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "log",
+                        "in": "body",
+                        "description": "log string",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadImage": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload image",
+                "description": "Return status. If success, return status = 0 and link. If fail, return status <> 0 and error",
+                "operationId": "uploadImage",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "upload image file",
+                        "required": true,
+                        "type": "file"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": "description string",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "channel",
+                        "in": "formData",
+                        "description": "channel choosing",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "channel_message",
+                        "in": "formData",
+                        "description": "channel choosing",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/esea/gamestatus": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "gamestatus",
+                "description": "Return status",
+                "operationId": "gamestatus",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/next-event-date": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get next event date",
+                "description": "return next event date {'status'=>0,'msg'=>'success','    nextEventDate'=>'NextEventDate'}",
+                "operationId": "next-event-date",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/eventGameInfo": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get event game info",
+                "description": "return game info include: game_name & team_name",
+                "operationId": "get event game info",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/getDiscordInfo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get discord info",
+                "description": "return discord full info of streamer",
+                "operationId": "api/getDiscordInfo",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "token boom",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "twitch, mixer username",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "type account: twitch (default), mixer",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/eventVod": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get event vod",
+                "description": "return even vod ",
+                "operationId": "get event vod",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/eventComingsoonInfo": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get eventComingsoonInfo",
+                "description": "return eventComingsoonInfo ",
+                "operationId": "get eventComingsoonInfo",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/eventSetOfVodUrl": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get event set vod url",
+                "description": "return event set vod url",
+                "operationId": "return event set vod ur",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/esea/vivemap": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "vivemap",
+                "description": "Return xml map file",
+                "operationId": "vivemap",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "mapid",
+                        "in": "body",
+                        "description": "mapid",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/mobilemap": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "mobilemap",
+                "description": "Return xml map file",
+                "operationId": "mobilemap",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "mapid",
+                        "in": "body",
+                        "description": "mapid",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/trending": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get trending video",
+                "description": "Return list of trending video",
+                "operationId": "getCarouselTrendingVideo",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {}
+            }
+        },
+        "/api/trending/current": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get trending video & current play video",
+                "description": "Return list of trending video & current video play index",
+                "operationId": "getCarouselTrendingVideo",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {}
+            }
+        },
+        "/api/updateSessionStreamer": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "updateSessionStreamer",
+                "description": "Return xml map file",
+                "operationId": "updateSessionStreamer",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "streamname",
+                        "in": "formData",
+                        "description": "streamer name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "starttime",
+                        "in": "formData",
+                        "description": "starttime is timestamp format",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "stoptime",
+                        "in": "formData",
+                        "description": "stoptime is timestamp format",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "numberBoom",
+                        "in": "formData",
+                        "description": "number of boom cmd in session",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/streamerLiveStart": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "streamer live start",
+                "description": "streamer live start",
+                "operationId": "StreamerLiveStart",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "streamer name",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/streamerLiveStop": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "streamer live stop",
+                "description": "streamer live stop",
+                "operationId": "StreamerLiveStop",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "streamer name",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/checkChannelModerator/{channel}": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "check channel have boomtvmod moderator ",
+                "description": "check channel have boomtvmod moderator",
+                "operationId": "checkChannelModerator",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "status and message"
+                    }
+                }
+            }
+        },
+        "/api/getSponsorshipVideoInfo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get infomation for sponsorship video",
+                "description": "get infomation for sponsorship video",
+                "operationId": "getSponsorshipVideoInfo",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/saveSetting": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "saveSetting",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "auto_tweet",
+                        "in": "formData",
+                        "description": "auto_tweet",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/shareOnSocial": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "shareOnSocial",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "video_code",
+                        "in": "formData",
+                        "description": "video_code",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "post_content",
+                        "in": "formData",
+                        "description": "post_content",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/refreshToken": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "refresh token",
+                "description": "refresh token",
+                "operationId": "refreshToken",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/removeConnections": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "removeConnections",
+                "description": "removeConnections",
+                "operationId": "removeConnections",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": "token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "type: twitter, discord",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/checkUploadSpeed": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "checkUploadSpeed",
+                "description": "checkUploadSpeed",
+                "operationId": "checkUploadSpeed",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload video",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "status = 0 if success"
+                    }
+                }
+            }
+        },
+        "/oauth": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "login with twitch",
+                "description": "Return url and params. If success, return status param = 0 and token. If fail, return status <> 0 and error",
+                "operationId": "redirectToProvider",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

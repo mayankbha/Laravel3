@@ -1,0 +1,91 @@
+  {
+    "title" : "CS:GO 1on1 March AIM Cup #3 CIS",
+    "id" : 68,
+    "username" : "Boomtv",
+    "game_name" : "Counter-Strike: Global Offensive",
+    "main_stream_url" : "http://test-hls.farm.boom.tv/hls360/caster[quality].m3u8",
+    "main_stream_poster" : "https://s3-us-west-2.amazonaws.com/boomtv-contents/thumnail360.png",
+    "sub_stream_url" : "http://test-hls.farm.boom.tv/hls/jumbotron[quality].m3u8",
+    "sub_stream_poster" : "",
+    "mini_map_url" : "",
+    "steam_link" : "#",
+    "samsung_gear_vr_link" : "#",
+    "offline_title" : "Live stream is starting soon...",
+    "offline_description" : "You’ll be able to watch the live stream in 2D and 360 mode. Prepare yourself for one of a kind streaming experiences!",
+    "event_description" : "ESL, a part of the in ternational digital entertainment group MTG, is the world's largest esports company, leading the industry across the most popular video games with numerous online and offline.",
+    "minimap" : {
+      "cache" : {
+        "map" : "Minimap_Cache.png",
+        "name" : "Cache",
+        "camera" : [
+          {"x" : 30, "y" : 19,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Bomb side A"},
+          {"x" : 30, "y" : 83,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bomb side B"},
+          {"x" : 48, "y" : 50,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "Middle"},
+          {"x" : 43, "y" : 77,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "B Halls"}
+        ]
+      },
+      "cobblestone" : {
+        "map" : "Minimap_Cobblestone.png",
+        "name" : "Cobblestone",
+        "camera" : [
+          {"x" : 28, "y" : 80,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Bombsite A -CT spawn"},
+          {"x" : 73, "y" : 71,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bombsite B"},
+          {"x" : 54, "y" : 52,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "B Long "},
+          {"x" : 23, "y" : 10,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "Courtyard"}
+        ]
+
+      },
+      "inferno" : {
+        "map" : "Minimap_Inferno.png",
+        "name" : "Inferno",
+        "camera" : [
+          {"x" : 45, "y" : 15,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Bombsite B"},
+          {"x" : 89, "y" : 79,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bombsite A"},
+          {"x" : 49, "y" : 35,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "Bananahallway"},
+          {"x" : 42, "y" : 68,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "Ramp - Middle"}
+        ]
+
+      },
+      "mirage" : {
+        "map" : "Minimap_Mirage.png",
+        "name" : "Mirage",
+        "camera" : [
+          {"x" : 47, "y" : 29,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "CAT"},
+          {"x" : 48, "y" : 81,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bombsite A"},
+          {"x" : 71, "y" : 50,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "Middle"},
+          {"x" : 17, "y" : 18,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "Bombsite B"}
+        ]
+
+      },
+      "nuke" : {
+        "map" : "Minimap_Nuke.png",
+        "name" : "Nuke",
+        "camera" : [
+          {"x" : 59, "y" : 73,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Outsite"},
+          {"x" : 46, "y" : 67,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Silo"},
+          {"x" : 56, "y" : 57,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "Bombsite B"},
+          {"x" : 60, "y" : 57,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "Bombsite A "}
+        ]
+      },
+      "overpass" : {
+        "map" : "Minimap_Overpass.png",
+        "name" : "Overpass",
+        "camera" : [
+          {"x" : 38, "y" : 16,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Bombsite A  (top of truck)"},
+          {"x" : 86, "y" : 29,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bomb side B"},
+          {"x" : 52, "y" : 50,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "Short A"},
+          {"x" : 17, "y" : 38,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "Long A (outside) "}
+        ]
+      },
+      "train" : {
+        "map" : "Minimap_Train.png",
+        "name" : "Train",
+        "camera" : [
+          {"x" : 42, "y" : 54,"url" : "http://test-hls.farm.boom.tv/hls360/test1[quality].m3u8","name" : "Bombsite A -T Train (Outside) "},
+          {"x" : 42, "y" : 84,"url" : "http://test-hls.farm.boom.tv/hls360/test2[quality].m3u8","name" : "Bombsite B (Inside)"},
+          {"x" : 71, "y" : 54,"url" : "http://test-hls.farm.boom.tv/hls360/test3[quality].m3u8","name" : "A3 Train -Bombtrain (outside)"},
+          {"x" : 91, "y" : 38,"url" : "http://test-hls.farm.boom.tv/hls360/test4[quality].m3u8","name" : "A1 -Hallway A2 A3 (inside)"}
+        ]
+      }
+    }
+  }

@@ -1,0 +1,235 @@
+{
+    "swagger": "2.0",
+    "paths": {
+        "/api/uploadlog": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload log",
+                "description": "Return status. If success, return status = 0 and message. If fail, return status <> 0 and message",
+                "operationId": "uploadLog",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadfile": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload file",
+                "description": "Return status. If success, return status = 0 and link. If fail, return status <> 0 and error",
+                "operationId": "postUploadFile",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadvideo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload video",
+                "description": "Return status. If success, return status = 0 and link. If fail, return status <> 0 and error",
+                "operationId": "postUploadVideo",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload video",
+                        "required": false,
+                        "type": "file"
+                    },
+                    {
+                        "name": "title",
+                        "in": "body",
+                        "description": "upload video",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/followings": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get list of who the user is following",
+                "description": "Return status. If success, return status = 0 and channels list. If fail, return status <> 0 and error",
+                "operationId": "followings",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/getLoginInfo": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get login info to chat room",
+                "description": "Return status. If success, return status = 0 and access_token and nick name. If fail, return status <> 0 and error",
+                "operationId": "getLoginInfo",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/client_version": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "get client version",
+                "description": "Return status = 0 if current version and link;status = 1 if not found client file",
+                "operationId": "getClientVersion",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "body",
+                        "description": "token",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/uploadClient": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "upload client",
+                "description": "Return status. If success, return status = 0 and message. If fail, return status <> 0 and message",
+                "operationId": "postUploadClient",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "body",
+                        "description": "upload file",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/oauth": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "login with twitch",
+                "description": "Return url and params. If success, return status param = 0 and token. If fail, return status <> 0 and error",
+                "operationId": "redirectToProvider",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

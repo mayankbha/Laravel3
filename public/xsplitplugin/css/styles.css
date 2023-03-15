@@ -1,0 +1,30 @@
+body {
+    /*background-color: lightblue;*/
+    opacity: 0.5;
+}
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+a {
+    color: white;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+	color: white;
+    font-size: 20px;
+}
+
+div {
+    color: white;
+    font-family: verdana;
+    opacity: 0.0;
+}
+
+form{
+    color: white;
+    font-family: verdana;
+}

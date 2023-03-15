@@ -1,0 +1,93 @@
+.slick-prev {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 18px;
+    width: 11px;
+    width: 75px;
+    height: 152px;
+    background-image: linear-gradient(to right, rgba(29, 31, 44, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.slick-prev:before {
+    background: url(../../assets/v1/left-arrow.png) no-repeat;
+    margin-left: 11px;
+    left: 0;
+}
+.slick-prev:hover, .slick-prev:focus {
+    background-image: linear-gradient(to right, rgba(29, 31, 44, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.slick-prev:hover:before, .slick-prev:focus:before {
+    opacity: 0.75;
+}
+.slick-next {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 18px;
+    width: 11px;
+    width: 75px;
+    height: 152px;
+    background-color: rgba(86, 85, 97, 0);
+    background-image: linear-gradient(to left, rgba(29, 31, 44, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.slick-next:before {
+    background: url(../../assets/v1/right-arrow.png) no-repeat;
+    margin-right: 11px;
+    right: 0;
+}
+.slick-next:hover, .slick-next:focus {
+    background-image: linear-gradient(to left, rgba(29, 31, 44, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.slick-next:hover:before, .slick-next:focus:before {
+    opacity: 0.75;
+}
+.slick-prev:before, .slick-next:before {
+    content: '';
+    height: 18px;
+    width: 11px;
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.slick-slide {
+    height: auto;
+}
+/* Carousel BIG*/
+
+
+.variable-width-big .slick-next, .variable-width-big .slick-prev {
+    width: 35px;
+    top: 40%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.variable-width-big .slick-next:hover, .variable-width-big .slick-next:focus, .variable-width-big .slick-prev:hover, .variable-width-big .slick-prev:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media all and (max-width: 430px) {
+    .variable-width-big .slick-next, .variable-width-big .slick-prev {
+        top: 33%;
+    }
+}
+@media all and (max-width: 330px) {
+    .variable-width-big .slick-next, .variable-width-big .slick-prev {
+        top: 30%;
+    }
+}
+    
